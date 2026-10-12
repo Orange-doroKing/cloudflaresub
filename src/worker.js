@@ -1,9 +1,9 @@
-// Cloudflare Worker: KV short link subscription + access token protection
-// Requires:
-// - KV namespace binding: SUB_STORE
-// - Secret/Variable: SUB_ACCESS_TOKEN
-// Optional:
-// - Secret/Variable: SUB_LINK_SECRET (legacy long-token compatibility)
+Cloudflare Worker: KV short link subscription + access token protection
+Requires:
+- KV namespace binding: SUB_STORE
+- Secret/Variable: SUB_ACCESS_TOKEN
+Optional:
+- Secret/Variable: SUB_LINK_SECRET (legacy long-token compatibility)
 
 function json(data, status = 200) {
   return new Response(JSON.stringify(data, null, 2), {
